@@ -12,18 +12,26 @@
 //}
 //export default App;
 
-
 //2: JSX with Variables
-function App() {
-  const name = "Aiman";
-  const age = 20;
+//function App() {
+  //const name = "Aiman";
+  //const age = 20;
+  //return (
+    //<>
+      //<h1>My Name is {name}</h1>
+      //<h2>Age: {age}</h2>
+    //</>
+  //);
+//}
+//export default App;
 
-  return (
-    <>
-      <h1>My Name is {name}</h1>
-      <h2>Age: {age}</h2>
-    </>
-  );
+import User from "./User";
+function App(){
+  return(
+    <div>
+      <h1>Props in React.js</h1>
+      <User/>
+    </div>
+  )
 }
-
 export default App;
