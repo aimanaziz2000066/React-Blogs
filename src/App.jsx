@@ -5,7 +5,9 @@
 //}
 //export default App;
 
-import College from "./College"
+const { useState, useEffect } = require("react");
+
+//import College from "./College"
 
 //function App(){
 //return(
@@ -40,91 +42,108 @@ import College from "./College"
 //export default App;
 
 //Nested Looping
-function App() {
-  const CollegeData =
-  {
-    name: "Islamia College",
-    city: "Peshawar",
-    website: "www.islamia.com",
-  },
-    student: [
-      {
-        name: "Ayesha",
-        age: "18",
-        email: "ayesha.test.com"
-      },
-      {
-        name: "Amna",
-        age: "20",
-        email: "amna.test.com"
-      },
-      {
-        name: "Alina",
-        age: "23",
-        email: "alina.test.com"
-      },
-    ]
-},
-{
-  name: "Jinnah College",
-    city: "Peshawar",
-      website: "www.jinnah.com",
-      },
-student: [
-  {
-    name: "Sara",
-    age: "25",
-    email: "sara.test.com"
-  },
-  {
-    name: "Laiba",
-    age: "20",
-    email: "laiba.test.com"
-  },
-  {
-    name: "Sumaiya",
-    age: "23",
-    email: "sumaiya.test.com"
-  },
-]
-{
-  name: "fazaia College",
-    city: "Islamabad",
-      website: "www.fazaia.com",
-      },
-student: [
-  {
-    name: "Aiman",
-    age: "18",
-    email: "aiman.test.com"
-  },
-  {
-    name: "Shafaq",
-    age: "26",
-    email: "shafaq.test.com"
-  },
-  {
-    name: "Laraib",
-    age: "23",
-    email: "laraib.test.com"
-  },
-]
+//function App() {
+  //const CollegeData =
+  //{
+    //name: "Islamia College",
+    //city: "Peshawar",
+    //website: "www.islamia.com",
+  //},
+    //student: [
+      //{
+        //name: "Ayesha",
+        //age: "18",
+        //email: "ayesha.test.com"
+      //},
+      //{
+        //name: "Amna",
+        //age: "20",
+        //email: "amna.test.com"
+      //},
+      //{
+        //name: "Alina",
+        //age: "23",
+        //email: "alina.test.com"
+      //},
+    //]
+//},
+//{
+  //name: "Jinnah College",
+    //city: "Peshawar",
+      //website: "www.jinnah.com",
+      //},
+//student: [
+  //{
+    //name: "Sara",
+    //age: "25",
+    //email: "sara.test.com"
+  //},
+  //{
+    //name: "Laiba",
+    //age: "20",
+    //email: "laiba.test.com"
+  //},
+  //{
+    //name: "Sumaiya",
+    //age: "23",
+    //email: "sumaiya.test.com"
+  //},
+//]
+//{
+  //name: "fazaia College",
+    //city: "Islamabad",
+      //website: "www.fazaia.com",
+      //},
+//student: [
+  //{
+    //name: "Aiman",
+    //age: "18",
+    //email: "aiman.test.com"
+  //},
+  //{
+    //name: "Shafaq",
+    //age: "26",
+    //email: "shafaq.test.com"
+  //},
+  //{
+    //name: "Laraib",
+    //age: "23",
+    //email: "laraib.test.com"
+  //},
+//]
+//return (
+  //<div>
+    //<h1>Nested Looping With Components</h1>
+    //{
+      //CollegeData.map((college, index) => (
+        //<div key={index}>
+          //<College college={college}/>
 
-return (
-  <div>
-    <h1>Nested Looping With Components</h1>
-    {
-      CollegeData.map((college, index) => (
-        <div key={index}>
-          <College college={college}/>
+        //</div>
 
-        </div>
+      //)
+      //)
+    //}
+  //</div>
+//)
+//export default App;
 
-      )
-
-      )
-    }
-  </div>
-)
-
+//useEffect Hooks
+function App(){
+  const[counter,setCounter]=useState(0);
+  const[data,setData]=useState(0);
+  useEffect(()=>{
+//callOnce();
+  },[])
+  function callOnce(){
+    console.log("callOnce function called");
+  }
+  return(
+    <div>
+      <h1>useEffect Hooks</h1>
+      <button onClick={()=>setCounter(counter+1)}>Counter {counter}</button>
+       <button onClick={()=>setData(data+1)}>Data {data}</button>
+    </div>
+  )
+}
 export default App;
