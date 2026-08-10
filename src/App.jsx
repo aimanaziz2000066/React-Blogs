@@ -5,7 +5,7 @@
 //}
 //export default App;
 
-const { useState, useEffect } = require("react");
+//const { useState, useEffect, Component } = require("react");
 
 //import College from "./College"
 
@@ -129,21 +129,36 @@ const { useState, useEffect } = require("react");
 //export default App;
 
 //useEffect Hooks
-function App(){
-  const[counter,setCounter]=useState(0);
-  const[data,setData]=useState(0);
-  useEffect(()=>{
+//function App(){
+  //const[counter,setCounter]=useState(0);
+  //const[data,setData]=useState(0);
+  //useEffect(()=>{
 //callOnce();
-  },[])
-  function callOnce(){
-    console.log("callOnce function called");
+  //},[])
+  //function callOnce(){
+    //console.log("callOnce function called");
+  //}
+  //return(
+    //<div>
+      //<h1>useEffect Hooks</h1>
+      //<button onClick={()=>setCounter(counter+1)}>Counter {counter}</button>
+       //<button onClick={()=>setData(data+1)}>Data {data}</button>
+    //</div>
+  //)
+//}
+//export default App;
+
+Handle Props Side Effect with useEffect in Component: -
+  function Counter({ counter, data }) {
+    const getCounter = () => {
+      console.log("call only");
+    }
+    getCounter()
+    return (
+      <div>
+        <h1>{counter}</h1>
+        <h1>{data}</h1>
+      </div>
+    )
   }
-  return(
-    <div>
-      <h1>useEffect Hooks</h1>
-      <button onClick={()=>setCounter(counter+1)}>Counter {counter}</button>
-       <button onClick={()=>setData(data+1)}>Data {data}</button>
-    </div>
-  )
-}
-export default App;
+export default Counter;
